@@ -74,9 +74,6 @@ endif
 " Start pathogen to handle plugins and then set up the rest of the plugins
 call pathogen#infect()
 
-" Settings for vim powerline
-set laststatus=2
-
 " Settings for ctrlp
 let g:ctrlp_max_height=30
 set wildignore+=*.pyc
