@@ -63,10 +63,6 @@ else
 fi
 unset color_prompt force_color_prompt
 
-# If not running interactively, do not do anything
-[[ $- != *i* ]] && return
-[[ $TERM != screen* ]] && exec tmux
-
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
