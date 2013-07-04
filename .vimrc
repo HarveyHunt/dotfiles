@@ -71,6 +71,9 @@ if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
 
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+
 " Start pathogen to handle plugins and then set up the rest of the plugins
 call pathogen#infect()
 

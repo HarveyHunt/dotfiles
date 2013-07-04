@@ -57,7 +57,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}[\[\033[0;36m\]\u@\h\[\033[00m\]]:\[\033[00m\]\w\[\033[0;96m\]$(if [[ $? == 0 ]]; then echo "\[\033[01;32m\]"; else echo "\[\033[01;31m\]"; fi)$\[\033[00m\]'
+    PS1='${debian_chroot:+($debian_chroot)}'
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -66,7 +66,7 @@ unset color_prompt force_color_prompt
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\[$(tput bold)\e[0;40m\]\]\[$(tput setaf 6)\]\[$(tput setaf 13)\]\u@\h [\W]\[$(tput setaf 6)\]\\$\[$(tput sgr0)\]\e[0m"
     ;;
 *)
     ;;
