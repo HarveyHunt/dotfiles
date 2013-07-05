@@ -1,0 +1,45 @@
+!black
+*color0:#3D3D3D
+*color8:#5E5E5E
+!red
+*color1:#8A2F58
+*color9:#CF4F88
+!green
+*color2:#287373
+*color10:#53A6A6
+!yellow
+*color3:#914E89
+*color11:#BF85CC
+!blue
+*color4:#395573
+*color12:#4779B3
+!magenta
+*color5:#5E468C
+*color13:#7F62B3
+!cyan
+*color6:#2B7694
+*color14:#47959E
+!white
+*color7:#899CA1
+*color15:#C0C0C0
+
+URxvt.background: #121212
+URxvt.foreground: #999999
+URxvt*scrollBar:true
+URxvt*scrollBar_right:true
+URxvt*scrollBar_floating:false
+URxvt*scrollstyle:plain
+URxvt*secondaryScroll:true
+
+URxvt.underlineColor:   cyan
+URxvt.saveLines:        8192
+URxvt.scrollBar: false
+URxvt.font: xft:Droid Sans Mono:size=12:antialias=true
+URxvt.letterSpace: -1
+URxvt.perl-ext-common:  default,matcher,tabbed
+URxvt.url-launcher:      /usr/bin/firefox
+URxvt.matcher.button:   1
+URxvt.tabbed.tabbar-fg: 6
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg:    6
+URxvt.tabbed.tab-bg:    0
