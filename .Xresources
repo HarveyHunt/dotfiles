@@ -1,32 +1,28 @@
-<<<<<<< HEAD
-!black
+!Black
 *color0:#3D3D3D
 *color8:#5E5E5E
-!red
+!Red
 *color1:#8A2F58
 *color9:#CF4F88
-!green
+!Green
 *color2:#287373
 *color10:#53A6A6
-!yellow
+!Yellow
 *color3:#914E89
 *color11:#BF85CC
-!blue
+!Blue
 *color4:#395573
 *color12:#4779B3
-!magenta
+!Magenta
 *color5:#5E468C
 *color13:#7F62B3
-!cyan
+!Cyan
 *color6:#2B7694
 *color14:#47959E
-!white
+!White
 *color7:#899CA1
 *color15:#C0C0C0
 
-URxvt.background: #121212
-URxvt.foreground: #999999
-=======
 #define S_base03        #002b36
 #define S_base02        #073642
 #define S_base01        #586e75
@@ -68,23 +64,18 @@ URxvt.foreground: #999999
 *color14:                 S_base1
 *color15:                 S_base3
 
->>>>>>> a70d30cb7229addae37f2c37ba3a790c8db7772c
 URxvt*scrollBar:true
 URxvt*scrollBar_right:true
 URxvt*scrollBar_floating:false
 URxvt*scrollstyle:plain
 URxvt*secondaryScroll:true
-
+URxvt.background: #121212
+URxvt.foreground: #999999
 URxvt.underlineColor:   cyan
 URxvt.saveLines:        8192
 URxvt.scrollBar: false
-<<<<<<< HEAD
 URxvt.font: xft:Droid Sans Mono:size=12:antialias=true
 URxvt.letterSpace: -1
-=======
-URxvt.font: xft:Liberation Mono:size=10:antialias=false
-URxvt.iconFile:    /usr/share/icons/elementary-xfce/apps/32/terminal.png
->>>>>>> a70d30cb7229addae37f2c37ba3a790c8db7772c
 URxvt.perl-ext-common:  default,matcher,tabbed
 URxvt.url-launcher:      /usr/bin/firefox
 URxvt.matcher.button:   1
