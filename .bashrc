@@ -7,7 +7,11 @@ case $- in
     *i*) ;;
       *) return;;
 esac
+<<<<<<< HEAD
 export EDITOR=vim
+=======
+
+>>>>>>> a70d30cb7229addae37f2c37ba3a790c8db7772c
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -66,7 +70,11 @@ unset color_prompt force_color_prompt
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
+<<<<<<< HEAD
     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\[$(tput bold)\]\[$(tput setaf 6)\][\[$(tput setaf 7)\]\u@\h \W\[$(tput setaf 6)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
+=======
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\[$(tput bold)\e[0;40m\]\]\[$(tput setaf 6)\]\[$(tput setaf 13)\]\u@\h [\W]\[$(tput setaf 6)\]\\$\[$(tput sgr0)\]\e[0m"
+>>>>>>> a70d30cb7229addae37f2c37ba3a790c8db7772c
     ;;
 *)
     ;;
