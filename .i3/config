@@ -159,7 +159,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         tray_output primary
-        status_command i3status
+        status_command i3status | ~/.i3/scripts/news.py
         position bottom
         font xft:Inconsolata-dz for Powerline 10
    colors {
