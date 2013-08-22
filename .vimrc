@@ -72,7 +72,7 @@ let g:pymode_rope = 1
 let g:pymode_breakpoint = 1
 
 let g:pymode_lint_checker = "pyflakes,pep8"
-let g:pymode_lint_ignore = "E501,E128"
+let g:pymode_lint_ignore = "E501,E128,W0401,"
 let g:pymode_lint_select = ""
 let g:pymode_lint_onfly = 1
 let g:pymode_lint_config = "$HOME/.pylintrc"
@@ -111,3 +111,6 @@ map <leader>n :NERDTreeToggle<CR>
 map <leader>t :MBEToggle<CR>
 map <leader>l :MBEbn<CR>
 map <leader>h :MBEbp<CR>
+
+" Vim-Airline
+set laststatus=2

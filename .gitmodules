@@ -19,3 +19,6 @@
 [submodule ".vim/bundle/minibufexpl"]
 	path = .vim/bundle/minibufexpl
 	url = https://github.com/fholgado/minibufexpl.vim
+[submodule "vim-airline"]
+	path = vim-airline
+	url = https://github.com/bling/vim-airline
