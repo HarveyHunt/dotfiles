@@ -28,8 +28,8 @@ set foldlevel=99
 
 " If using a dark background within the editing area and syntax highlighting
 " turn on this option as well
-set background=dark
 colorscheme xoria256 
+set background=dark
 syntax enable
 
 " Uncomment the following to have Vim jump to the last position when
@@ -114,3 +114,9 @@ map <leader>h :MBEbp<CR>
 
 " Vim-Airline
 set laststatus=2
+
+" Indent-guide
+let g:indent_guides_start_level = 2
+hi IndentGuidesOdd  ctermbg=black
+hi IndentGuidesEven ctermbg=darkgrey
+let g:indent_guides_guide_size = 1
