@@ -108,13 +108,12 @@ let g:pymode_indent = 1
 " Nerdtree
 map <leader>n :NERDTreeToggle<CR>
 
-" MBE
-map <leader>t :MBEToggle<CR>
-map <leader>l :MBEbn<CR>
-map <leader>h :MBEbp<CR>
-
-" Vim-Airline
+" vim-airline
 set laststatus=2
+let g:airline_theme='bubblegum'
+let g:airline#extensions#tabline#enabled = 1
+map <leader>l :bn<CR>
+map <leader>h :bp<CR>
 
 " Indent-guide
 let g:indent_guides_start_level = 2
