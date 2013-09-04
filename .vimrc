@@ -59,9 +59,6 @@ highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 
 match OverLength /\%81v.\+/
 
-" Tasklists
-map <leader>td <Plug>TaskList
-
 " Gundo
 map <leader>g :GundoToggle<CR>
 
