@@ -8,37 +8,21 @@ filetype off
 call pathogen#infect()
 call pathogen#helptags()
 
-" Line numbers and length.
-set number " Show line numbers
+"### General
 set tw=79 " Width of document
 set nowrap " Don't automatically wrap on load
 set fo-=t " Don't automatically wrap during typing
 highlight ColorColumn ctermbg=233
-
-" Set tabs as spaces.
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set shiftround
 set expandtab
-
-" Folding
-set foldmethod=indent
+set foldmethod=syntax
 set foldlevel=99
-
-" If using a dark background within the editing area and syntax highlighting
-" turn on this option as well
 colorscheme xoria256 
 set background=dark
 syntax enable
-
-" Uncomment the following to have Vim jump to the last position when
-" reopening a file
-if has("autocmd")
-  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-  filetype plugin indent on
-endif
-
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
 set showcmd		" Show (partial) command in status line.
@@ -47,24 +31,31 @@ set ignorecase		" Do case insensitive matching
 set smartcase		" Do smart case matching
 set incsearch		" Incremental search
 set autochdir
-"set hidden             " Hide buffers when they are abandoned
-"set mouse=a		" Enable mouse usage (all modes)
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+set number
+au WinEnter * setlocal number
+au WinLeave * setlocal nonumber
+" Uncomment the following to have Vim jump to the last position when
+" reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+  filetype plugin indent on
+  autocmd FileType c setlocal ts=8 sw=8 sts=8 noet ai list listchars=tab:┊\ 
+  autocmd FileType py setlocal ts=4 sw=4 sts=4 et ai
+endif
 
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
 
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-
-match OverLength /\%81v.\+/
-
 " Gundo
 map <leader>u :GundoToggle<CR>
 
 " Nerdtree
 map <leader>n :NERDTreeToggle<CR>
-
+let NERDChristmasTree=1
 " vim-airline
 set laststatus=2
 let g:airline_theme='bubblegum'
