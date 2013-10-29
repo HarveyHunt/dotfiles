@@ -37,7 +37,7 @@ let colors_name = "xoria256"
 " Colours {{{1
 "" General {{{2
 hi Normal       ctermfg=252 guifg=#d0d0d0 ctermbg=234 guibg=#1c1c1c cterm=none gui=none
-hi Cursor                                 ctermbg=214 guibg=#ffaf00
+hi Cursor                                 ctermbg=214 guibg=#108db7
 hi CursorColumn                           ctermbg=238 guibg=#444444
 hi CursorLine                             ctermbg=237 guibg=#3a3a3a cterm=none gui=none
 hi Error        ctermfg=15  guifg=#ffffff ctermbg=1   guibg=#800000
@@ -78,9 +78,9 @@ hi VisualNOS    ctermfg=255 guifg=#eeeeee ctermbg=60  guibg=#5f5f87
 hi WildMenu     ctermfg=0   guifg=#000000 ctermbg=150 guibg=#afdf87 cterm=bold gui=bold
 
 "" Syntax highlighting {{{2
-hi Comment      ctermfg=244 guifg=#808080
+hi Comment      ctermfg=244 guifg=#dfafdf
 hi Constant     ctermfg=229 guifg=#ffffaf
-hi Identifier   ctermfg=182 guifg=#dfafdf                           cterm=none
+hi Identifier   ctermfg=182 guifg=#108db7                           cterm=none
 hi Ignore       ctermfg=238 guifg=#444444
 hi Number       ctermfg=180 guifg=#dfaf87
 hi PreProc      ctermfg=150 guifg=#afdf87

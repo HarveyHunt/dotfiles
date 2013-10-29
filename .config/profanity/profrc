@@ -1,0 +1,13 @@
+[ui]
+theme=aqua
+history=true
+intype=true
+splash=true
+vercheck=true
+
+[logging]
+chlog=true
+
+[notifications]
+message=true
+typing=false

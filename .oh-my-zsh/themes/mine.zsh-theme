@@ -19,7 +19,7 @@ local user="%(!.%{$fg[blue]%}.%{$fg[blue]%})%n%{$reset_color%}"
 local host="@${host_repr[$(hostname)]:-$(hostname)}%{$reset_color%}"
 
 # Compacted $PWD
-local pwd="%{$fg[yellow]%}%c%{$reset_color%}"
+local pwd="%{$fg[gray]$bg[black]%}%c%{$reset_color%}"
 
 PROMPT='${user} ${pwd} $(git_prompt_info) '
 
@@ -27,8 +27,8 @@ PROMPT='${user} ${pwd} $(git_prompt_info) '
 # but lets see how this works out
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[blue]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[green]%} %{$fg[yellow]%}»%{$fg[green]%}%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[green]%} %{$fg[gray]%}»%{$fg[green]%}%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%} »"
 
 # elaborate exitcode on the right when >0
 return_code_enabled="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"

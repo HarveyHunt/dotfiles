@@ -1,0 +1,13 @@
+[general]
+interval = 1
+loggingLevel = ERROR
+logFile = ~/.i3situation/log.txt
+colors = true
+
+[cmus]
+plugin = cmus
+color = #000000
+
+[time]
+plugin = dateTime
+color = #000000

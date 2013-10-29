@@ -13,6 +13,7 @@ set tw=79 " Width of document
 set nowrap " Don't automatically wrap on load
 set fo-=t " Don't automatically wrap during typing
 highlight ColorColumn ctermbg=233
+set wildmenu
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -23,8 +24,6 @@ set foldlevel=99
 colorscheme xoria256 
 set background=dark
 syntax enable
-" The following are commented out as they cause vim to behave a lot
-" differently from regular Vi. They are highly recommended though.
 set showcmd		" Show (partial) command in status line.
 set showmatch		" Show matching brackets.
 set ignorecase		" Do case insensitive matching
@@ -45,20 +44,16 @@ if has("autocmd")
   autocmd FileType py setlocal ts=4 sw=4 sts=4 et ai
 endif
 
-" Source a global configuration file if available
-if filereadable("/etc/vim/vimrc.local")
-  source /etc/vim/vimrc.local
-endif
-
 " Gundo
 map <leader>u :GundoToggle<CR>
 
 " Nerdtree
 map <leader>n :NERDTreeToggle<CR>
 let NERDChristmasTree=1
+
 " vim-airline
 set laststatus=2
-let g:airline_theme='bubblegum'
+let g:airline_theme='solarized'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 map <leader>l :bn<CR>
