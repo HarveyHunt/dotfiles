@@ -6,8 +6,10 @@ colors = true
 
 [cmus]
 plugin = cmus
-color = #000000
+color = #0d132b
+menuCommand = python /home/harvey/.i3situation/scripts/vol.py | dzen2 -p -l 10 -w 20 -e "onstart=uncollapse;button2=exit" -y -30 -bg "#0d132b"
 
 [time]
 plugin = dateTime
-color = #000000
+color = #0d132b
+menuCommand = cal | dzen2 -y -30 -w 180 -l 7 -p -bg "#0d132b" -fg "#70898f" -e "onstart=uncollapse;button1=exit" -fn "xft:Droid Sans Mono:size=10" -ta c -sa c

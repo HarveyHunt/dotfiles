@@ -13,9 +13,6 @@ new_float 1pixel
 
 set $mod Mod4
 
-# Autostart
-exec urxvt
-
 #class                  border   backgr.  text
 client.focused          #70898F #70898F #000000
 client.focused_inactive #191919 #191919 #999999
@@ -171,8 +168,8 @@ bar {
    colors {
         background #70898f
         statusline #605c5a
-        focused_workspace #000000 #70898f #000000
-        inactive_workspace #000000 #101010 #70898f
+        focused_workspace #0d132b #70898f #0d132b
+        inactive_workspace #0d132b #0d132b #70898f
         urgent_workspace #2e3436 #9a878f
 	}
 }
