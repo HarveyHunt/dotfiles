@@ -13,6 +13,7 @@ set tw=79 " Width of document
 set nowrap " Don't automatically wrap on load
 set fo-=t " Don't automatically wrap during typing
 highlight ColorColumn ctermbg=233
+call matchadd('ColorColumn', '\%80v', 100)
 set wildmenu
 set tabstop=4
 set softtabstop=4
@@ -30,8 +31,6 @@ set ignorecase		" Do case insensitive matching
 set smartcase		" Do smart case matching
 set incsearch		" Incremental search
 set autochdir
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
 set number
 au WinEnter * setlocal number
 au WinLeave * setlocal nonumber
@@ -44,6 +43,9 @@ if has("autocmd")
   autocmd FileType py setlocal ts=4 sw=4 sts=4 et ai
 endif
 
+" Python
+map <leader>r :!python % <CR>
+
 " Gundo
 map <leader>u :GundoToggle<CR>
 
@@ -53,7 +55,7 @@ let NERDChristmasTree=1
 
 " vim-airline
 set laststatus=2
-let g:airline_theme='solarized'
+let g:airline_theme='jellybeans'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 map <leader>l :bn<CR>
