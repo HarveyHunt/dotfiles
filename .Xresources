@@ -5,13 +5,9 @@ URxvt.cursorColor: #38aac7
 URxvt.underlineColor:   cyan
 URxvt.saveLines:        8192
 URxvt.letterSpace: -1
-URxvt.perl-ext-common:  default,matcher,tabbed
+URxvt.perl-ext-common:  default,matcher
 URxvt.url-launcher:      /usr/bin/firefox
 URxvt.matcher.button:   1
-URxvt.tabbed.tabbar-fg: 6
-URxvt.tabbed.tabbar-bg: 0
-URxvt.tabbed.tab-fg:    6
-URxvt.tabbed.tab-bg:    0
 
 URxvt.background: #232323
 URxvt.foreground: #A0A0A0
