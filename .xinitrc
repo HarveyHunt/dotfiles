@@ -3,5 +3,5 @@ xrdb /home/harvey/.Xresources
 sh ~/.fehbg &
 pulseaudio --start
 compton --config ~/.compton.conf -b
-unclutter &
+xbanish -d &
 exec i3
