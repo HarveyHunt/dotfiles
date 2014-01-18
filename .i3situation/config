@@ -4,6 +4,12 @@ loggingLevel = ERROR
 logFile = ~/.i3situation/log.txt
 colors = true
 
+#[reddit]
+#plugin = reddit
+#color = #0d132b
+#mode = subreddit
+#subreddits = unixporn,unixporn
+
 [cmus]
 plugin = cmus
 color = #0d132b

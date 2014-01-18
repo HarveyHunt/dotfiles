@@ -42,9 +42,12 @@ if has("autocmd")
   autocmd FileType c setlocal ts=8 sw=8 sts=8 noet ai
   autocmd FileType py setlocal ts=4 sw=4 sts=4 et ai
 endif
+
 "Allow the use of enter in normal mode.
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
+
+map <space> <leader>
 
 " Python
 map <leader>r :!python % <CR>

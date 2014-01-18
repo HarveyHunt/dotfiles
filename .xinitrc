@@ -1,6 +1,6 @@
 setxkbmap gb
 xrdb /home/harvey/.Xresources
-sh ~/.fehbg &
+sh ~/.wallpaper.sh &
 pulseaudio --start
 compton --config ~/.compton.conf -b
 xbanish -d &
