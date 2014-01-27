@@ -1,0 +1,21 @@
+[general]
+interval = 1
+logging_level = ERROR
+log_file = ~/.config/i3situation/log.txt
+colors = true
+
+#[reddit]
+#plugin = reddit
+#color = #0d132b
+#mode = subreddit
+#subreddits = unixporn
+
+[cmus]
+plugin = cmus
+color = #0d132b
+menu_command = python /home/harvey/.config/i3situation/scripts/vol.py | dzen2 -p -l 10 -w 20 -e "onstart=uncollapse;button2=exit" -y -30 -bg "#0d132b"
+
+[time]
+plugin = date_time
+color = #0d132b
+menu_command = cal | dzen2 -y -30 -w 180 -l 7 -p -bg "#0d132b" -fg "#70898f" -e "onstart=uncollapse;button1=exit" -fn "xft:Droid Sans Mono:size=10" -ta c -sa c
