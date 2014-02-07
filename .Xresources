@@ -1,4 +1,4 @@
-URxvt.font: xft:Droid Sans Mono:size=12:antialias=true
+URxvt.font: xft:Inconsolata-dz:size=12:antialias=true
 URxvt*secondaryScroll:true
 URxvt.scrollBar: false
 URxvt.cursorColor: #38aac7

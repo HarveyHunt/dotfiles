@@ -164,7 +164,7 @@ bar {
         tray_output primary
         position bottom
         status_command i3situation
-        font xft:Inconsolata-dz for Powerline 10
+        font xft:Inconsolata-dz 10
    colors {
         background #70898f
         statusline #605c5a
