@@ -101,13 +101,14 @@ set $2 2 vim
 set $3 3 www
 set $4 4 chat
 set $5 5 media
+set $6 6 games
 # switch to workspace
 bindsym $mod+1 workspace $1
 bindsym $mod+2 workspace $2
 bindsym $mod+3 workspace $3
 bindsym $mod+4 workspace $4
 bindsym $mod+5 workspace $5
-bindsym $mod+6 workspace 6
+bindsym $mod+6 workspace $6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
