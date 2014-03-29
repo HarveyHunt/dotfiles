@@ -19,23 +19,23 @@ local user="%(!.%{$fg[blue]%}.%{$fg[blue]%})%n%{$reset_color%}"
 local host="@${host_repr[$(hostname)]:-$(hostname)}%{$reset_color%}"
 
 # Compacted $PWD
-local pwd="%{$fg[gray]$bg[black]%}%c%{$reset_color%}"
+local pwd="%{$fg[gray]$bg[black]%}%d%{$reset_color%}"
 
-PROMPT='${user} ${pwd} $(git_prompt_info) '
+PROMPT='${user} ${pwd} » '
 
 # i would prefer 1 icon that shows the "most drastic" deviation from HEAD,
 # but lets see how this works out
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[blue]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[green]%} %{$fg[gray]%}»%{$fg[green]%}%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%} »"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[green]%} %{$fg[gray]%}%{$fg[green]%}%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}"
 
 # elaborate exitcode on the right when >0
 return_code_enabled="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 return_code_disabled=
 return_code=$return_code_enabled
 
-RPS1='${return_code}'
+RPS1='${return_code} $(git_prompt_info)'
 
 function accept-line-or-clear-warning () {
 	if [[ -z $BUFFER ]]; then

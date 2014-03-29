@@ -1,4 +1,4 @@
-URxvt.font: xft:Inconsolata-dz:size=12:antialias=true
+URxvt.font: xft:Dejavu Sans Mono:size=12:antialias=true
 URxvt*secondaryScroll:true
 URxvt.scrollBar: false
 URxvt.cursorColor: #38aac7
@@ -9,41 +9,35 @@ URxvt.perl-ext-common:  default,matcher
 URxvt.url-launcher:      /usr/bin/firefox
 URxvt.matcher.button:   1
 
-URxvt.background: #232323
-URxvt.foreground: #A0A0A0
+*foreground: #70898F
+*background: #151515
 
-URxvt.colorBD:    #CFCFCF
-URxvt.colorUL:    #A0A0A0
-URxvt.colorIT:    #686868
+!black
+*color0:     #101010
+*color8:     #404040
+!red
+*color1:     #E84F4F
+*color9:     #D23D3D
+!green
+*color2:     #B8D68C
+*color10:    #A0CF5D
+!yellow
+*color3:     #E1AA5D
+*color11:    #F39D21
+!blue
+*color4:     #7DC1CF
+*color12:    #4E9FB1
+!magenta
+*color5:     #74718e
+*color13:    #74718e
+!cyan
+*color6:     #70898F
+*color14:    #70898F
+!white
+*color7:     #dddddd
+*color15:    #dddddd
 
-!BLK
-URxvt.color0:     #303030
-URxvt.color8:     #686868
-
-!RED
-URxvt.color9:     #FFA7DA
-URxvt.color1:     #D370A3
-
-!GRN
-URxvt.color10:    #A3D572
-URxvt.color2:     #6D9E3F
-
-!BLU
-URxvt.color12:    #98CBFE
-URxvt.color4:     #6095C5
-
-!YEL
-URxvt.color11:    #EFBD8B
-URxvt.color3:     #B58858
-
-!CYN
-URxvt.color14:    #75DAA9
-URxvt.color6:     #3BA275
-
-!MAG
-URxvt.color13:    #E5B0FF
-URxvt.color5:     #AC7BDE
-
-!WHT
-URxvt.color7:     #CFCFCF
-URxvt.color15:    #FFFFFF
+URxvt*borderColor:        #151515
+URxvt*colorBD:            #ffffff
+URxvt*cursorColor:        #ff8939
+URxvt*cursorColor2:       #151515
