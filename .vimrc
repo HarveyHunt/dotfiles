@@ -31,7 +31,6 @@ set ignorecase		" Do case insensitive matching
 set smartcase		" Do smart case matching
 set incsearch		" Incremental search
 set autochdir
-set number
 au WinEnter * setlocal number
 au WinLeave * setlocal nonumber
 " Uncomment the following to have Vim jump to the last position when
@@ -42,6 +41,15 @@ if has("autocmd")
   autocmd FileType c setlocal ts=8 sw=8 sts=8 noet ai
   autocmd FileType py setlocal ts=4 sw=4 sts=4 et ai
 endif
+
+fun! <SID>StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfun
+
+autocmd FileType c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
 "Allow the use of enter in normal mode.
 nmap <S-Enter> O<Esc>
