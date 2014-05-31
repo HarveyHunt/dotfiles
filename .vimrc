@@ -67,6 +67,9 @@ map <leader>u :GundoToggle<CR>
 map <leader>n :NERDTreeToggle<CR>
 let NERDChristmasTree=1
 
+" Doxygen
+map <leader>d :Dox<CR>
+
 " vim-airline
 set laststatus=2
 let g:airline_theme='jellybeans'
