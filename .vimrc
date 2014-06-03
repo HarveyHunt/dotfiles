@@ -14,6 +14,7 @@ set nowrap " Don't automatically wrap on load
 set fo-=t " Don't automatically wrap during typing
 highlight ColorColumn ctermbg=233
 call matchadd('ColorColumn', '\%80v', 100)
+set number
 set wildmenu
 set tabstop=4
 set softtabstop=4
@@ -39,6 +40,7 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
   filetype plugin indent on
   autocmd FileType c setlocal ts=8 sw=8 sts=8 noet ai
+  autocmd FileType cpp setlocal ts=8 sw=8 sts=8 noet ai
   autocmd FileType py setlocal ts=4 sw=4 sts=4 et ai
 endif
 
