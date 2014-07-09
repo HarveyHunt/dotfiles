@@ -9,35 +9,25 @@ URxvt.perl-ext-common:  default,matcher
 URxvt.url-launcher:      /usr/bin/firefox
 URxvt.matcher.button:   1
 
-*foreground: #70898F
-*background: #151515
 
-!black
-*color0:     #101010
-*color8:     #404040
-!red
-*color1:     #E84F4F
-*color9:     #D23D3D
-!green
-*color2:     #B8D68C
-*color10:    #A0CF5D
-!yellow
-*color3:     #E1AA5D
-*color11:    #F39D21
-!blue
-*color4:     #7DC1CF
-*color12:    #4E9FB1
-!magenta
-*color5:     #74718e
-*color13:    #74718e
-!cyan
-*color6:     #70898F
-*color14:    #70898F
-!white
-*color7:     #dddddd
-*color15:    #dddddd
+!!!! skateboard !!!!
 
-URxvt*borderColor:        #151515
-URxvt*colorBD:            #ffffff
-URxvt*cursorColor:        #ff8939
-URxvt*cursorColor2:       #151515
+URxvt*background: #252525
+URxvt*foreground: #999999
+
+*color0: #121212
+*color1: #303030
+*color2: #4D4D4D
+*color3: #6E6E6E
+*color4: #909090
+*color5: #B0B0B0
+*color6: #D0D0D0
+*color7: #F7F7F7
+*color8: #70898F
+*color9: #303030
+*color10: #4D4D4D
+*color11: #6E6E6E
+*color12: #909090
+*color13: #B0B0B0
+*color14: #D0D0D0
+*color15: #F7F7F7
