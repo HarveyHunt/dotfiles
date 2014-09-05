@@ -6,28 +6,34 @@ URxvt.underlineColor:   cyan
 URxvt.saveLines:        8192
 URxvt.letterSpace: -1
 URxvt.perl-ext-common:  default,matcher
-URxvt.url-launcher:      /usr/bin/firefox
+URxvt.url-launcher:      /usr/bin/dwb
 URxvt.matcher.button:   1
 
-
-!!!! skateboard !!!!
+! Foggy Hills 3 !
+!                   /\
+!                 //  \     _      /\
+!     /\_        _//   \   / \/\ _/  \    /\
+!   _/   \/\   _/ /     \_/   \_/     \__/ _\
+!  /        `./   \_     \_    / //    /    \\
+! //          \_  / \      \  / _     /  /    \
+!//             |/         
 
 URxvt*background: #252525
-URxvt*foreground: #999999
+URxvt*foreground: #DDDDDD
 
-*color0: #121212
-*color1: #303030
-*color2: #4D4D4D
-*color3: #6E6E6E
-*color4: #909090
-*color5: #B0B0B0
-*color6: #D0D0D0
-*color7: #F7F7F7
-*color8: #70898F
-*color9: #303030
-*color10: #4D4D4D
-*color11: #6E6E6E
-*color12: #909090
-*color13: #B0B0B0
-*color14: #D0D0D0
-*color15: #F7F7F7
+*color0: #010606
+*color1: #070F0F
+*color2: #093B40
+*color3: #515554
+*color4: #125C64
+*color5: #1F7C82
+*color6: #2EA1A5
+*color7: #58AEB2
+*color8: #77C0C3
+*color9: #84BEC0
+*color10: #9FD1D3
+*color11: #B7DBDB
+*color12: #BCE2E1
+*color13: #C1E0DF
+*color14: #C1DEDE
+*color15: #C4E2E2
