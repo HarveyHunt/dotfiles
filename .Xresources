@@ -6,7 +6,7 @@ URxvt.underlineColor:   cyan
 URxvt.saveLines:        8192
 URxvt.letterSpace: -1
 URxvt.perl-ext-common:  default,matcher
-URxvt.url-launcher:      /usr/bin/dwb
+URxvt.url-launcher:      /usr/bin/firefox
 URxvt.matcher.button:   1
 
 ! Foggy Hills 3 !
