@@ -1,0 +1,7 @@
+#!/bin/bash
+cottage -c border_px 4
+cottage -c scratchpad_height 4
+cottage -c scratchpad_width 4
+cottage -c border_unfocus "#232323"
+cottage -c border_prev_focus "#232323"
+cottage -c border_focus "#555555"

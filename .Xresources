@@ -6,34 +6,25 @@ URxvt.underlineColor:   cyan
 URxvt.saveLines:        8192
 URxvt.letterSpace: -1
 URxvt.perl-ext-common:  default,matcher
-URxvt.url-launcher:      /usr/bin/firefox
+URxvt.url-launcher:      /usr/bin/google-chrome-stable
 URxvt.matcher.button:   1
 
-! Foggy Hills 3 !
-!                   /\
-!                 //  \     _      /\
-!     /\_        _//   \   / \/\ _/  \    /\
-!   _/   \/\   _/ /     \_/   \_/     \__/ _\
-!  /        `./   \_     \_    / //    /    \\
-! //          \_  / \      \  / _     /  /    \
-!//             |/         
+*URxvt*background:   #121212
+*URxvt*foreground:   #abacae
 
-URxvt*background: #252525
-URxvt*foreground: #DDDDDD
-
-*color0: #010606
-*color1: #070F0F
-*color2: #093B40
-*color3: #515554
-*color4: #125C64
-*color5: #1F7C82
-*color6: #2EA1A5
-*color7: #58AEB2
-*color8: #77C0C3
-*color9: #84BEC0
-*color10: #9FD1D3
-*color11: #B7DBDB
-*color12: #BCE2E1
-*color13: #C1E0DF
-*color14: #C1DEDE
-*color15: #C4E2E2
+*color0:       #2a2a2a
+*color1:       #4c3333
+*color2:       #959c4f
+*color3:       #976c4e
+*color4:       #3d5a72
+*color5:       #978a9b
+*color6:       #4a5e5b
+*color7:       #a1a7ad
+*color8:       #3a3a3a
+*color9:       #8d4d4d
+*color10:      #b6bd6e
+*color11:      #bc9f67
+*color12:      #7a9dbc
+*color13:      #ae9eb3
+*color14:      #80a09b
+*color15:      #c7cbcf
