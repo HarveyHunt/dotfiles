@@ -60,6 +60,9 @@ nmap <CR> o<Esc>
 
 map <space> <leader>
 
+" Hide highlighting
+map <leader>c :noh<CR>
+
 " Python
 map <leader>r :!python % <CR>
 
