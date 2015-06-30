@@ -32,12 +32,14 @@ set ignorecase		" Do case insensitive matching
 set smartcase		" Do smart case matching
 set incsearch		" Incremental search
 set autochdir
+set hlsearch
 au WinEnter * setlocal number
 au WinLeave * setlocal nonumber
 
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
   filetype plugin indent on
+  autocmd FileType c setlocal ts=8 sw=8 sts=8 noet ai
   autocmd FileType c setlocal ts=8 sw=8 sts=8 noet ai
   autocmd FileType cpp setlocal ts=8 sw=8 sts=8 noet ai
   autocmd FileType py setlocal ts=4 sw=4 sts=4 et ai
