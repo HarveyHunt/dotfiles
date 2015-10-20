@@ -43,7 +43,7 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
   filetype plugin indent on
   autocmd FileType c setlocal ts=8 sw=8 sts=8 noet ai
-  autocmd FileType c setlocal ts=8 sw=8 sts=8 noet ai
+  autocmd FileType dts setlocal ts=8 sw=8 sts=8 noet ai
   autocmd FileType cpp setlocal ts=8 sw=8 sts=8 noet ai
   autocmd FileType py setlocal ts=4 sw=4 sts=4 et ai
 endif
