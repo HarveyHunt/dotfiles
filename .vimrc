@@ -9,6 +9,7 @@ call pathogen#infect()
 call pathogen#helptags()
 
 "### General
+set tags=tags;/ " Look recursively upwards for a tags file
 set tw=79 " Width of document
 set nowrap " Don't automatically wrap on load
 set fo-=t " Don't automatically wrap during typing
