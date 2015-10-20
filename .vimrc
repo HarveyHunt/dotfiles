@@ -17,6 +17,7 @@ highlight ColorColumn ctermbg=233
 call matchadd('ColorColumn', '\%80v', 100)
 set number
 set wildmenu
+set wildmode=full " ZSH like autocompletion
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
