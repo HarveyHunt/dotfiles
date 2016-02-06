@@ -46,6 +46,7 @@ if has("autocmd")
   autocmd FileType dts setlocal ts=8 sw=8 sts=8 noet ai
   autocmd FileType cpp setlocal ts=8 sw=8 sts=8 noet ai
   autocmd FileType py setlocal ts=4 sw=4 sts=4 et ai
+  autocmd FileType rs setlocal ts=4 sw=4 sts=4 et ai
 endif
 
 fun! <SID>StripTrailingWhitespaces()

@@ -22,3 +22,6 @@
 [submodule ".vim/bundle/DoxygenToolkit.vim"]
 	path = .vim/bundle/DoxygenToolkit.vim
 	url = ../../vim-scripts/DoxygenToolkit.vim
+[submodule ".vim/bundle/rust.vim"]
+	path = .vim/bundle/rust.vim
+	url = https://github.com/rust-lang/rust.vim
