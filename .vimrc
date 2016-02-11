@@ -88,3 +88,6 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 map <leader>l :bn<CR>
 map <leader>h :bp<CR>
 map <leader>q :bd<CR>
+
+" rust.vim
+let g:rustfmt_autosave = 1
