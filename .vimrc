@@ -3,10 +3,22 @@ runtime! archlinux.vim
 "Automatic reloading of .vimrc
 au BufWritePost .vimrc so ~/.vimrc
 
-" Start pathogen to handle plugins and then set up the rest of the plugins
+" Start vundle to handle plugins and then set up the rest of the plugins
+set nocompatible
 filetype off
-call pathogen#infect()
-call pathogen#helptags()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-surround'
+Plugin 'rust-lang/rust.vim'
+Plugin 'vim-scripts/The-NERD-tree'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'sjl/gundo.vim'
+call vundle#end()
+filetype plugin indent on 
 
 "### General
 set tags=tags;/ " Look recursively upwards for a tags file
