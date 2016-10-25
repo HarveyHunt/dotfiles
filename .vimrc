@@ -94,7 +94,7 @@ map <leader>d :Dox<CR>
 
 " vim-airline
 set laststatus=2
-let g:airline_theme='jellybeans'
+let g:airline_theme='bubblegum'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 map <leader>l :bn<CR>
