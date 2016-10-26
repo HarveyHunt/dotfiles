@@ -101,3 +101,5 @@ map <leader>l :bn<CR>
 map <leader>h :bp<CR>
 map <leader>q :bd<CR>
 
+" Syntastic
+let g:syntastic_rust_checkers = ['rustc']
