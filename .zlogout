@@ -1,0 +1,1 @@
+/home/hunt/.zprezto/runcoms/zlogout
