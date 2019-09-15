@@ -1,55 +1,99 @@
 runtime! archlinux.vim
+let mapleader = "\<Space>"
 
 "Automatic reloading of .vimrc
 au BufWritePost .vimrc so ~/.vimrc
 
-" Start vundle to handle plugins and then set up the rest of the plugins
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-surround'
-Plugin 'rust-lang/rust.vim'
-Plugin 'vim-scripts/The-NERD-tree'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'sjl/gundo.vim'
-call vundle#end()
-filetype plugin indent on 
+" Start vim-plug to handle plugins and then set up the rest of the plugins
+call plug#begin("~/.vim/plugged")
+" UI Plugins
+Plug 'itchyny/lightline.vim'
+Plug 'w0rp/ale'
+Plug 'machakann/vim-highlightedyank'
+Plug 'Yggdroot/indentLine'
+Plug 'chriskempson/base16-vim'
 
-"### General
+" Autocomplete
+Plug 'ncm2/ncm2'
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-path'
+Plug 'roxma/nvim-yarp'
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+
+" Search
+Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
+Plug 'junegunn/fzf.vim'
+
+" Misc
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'rust-lang/rust.vim'
+call plug#end()
+
+" General
 set tags=tags;/ " Look recursively upwards for a tags file
 set tw=79 " Width of document
 set nowrap " Don't automatically wrap on load
 set fo-=t " Don't automatically wrap during typing
-highlight ColorColumn ctermbg=233
+set undodir=~/.vimundo
+set undofile
+
+" UI changes
+colorscheme base16-harmonic-dark
+set background=dark
+syntax enable
 call matchadd('ColorColumn', '\%80v', 100)
-set number
+set list lcs=tab:\┊\ 
+set showcmd
+set showmatch
+set number relativenumber
+set hlsearch
+set mouse=a
+au WinEnter * setlocal number relativenumber
+au WinLeave * setlocal nonumber norelativenumber
+set noshowmode
+set laststatus=2
+
 set wildmenu
-set wildmode=full " ZSH like autocompletion
+set wildmode=full
+
+" Tabs / spaces
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set shiftround
 set expandtab
+
+set lazyredraw
+
+" Folds
+set foldenable
 set foldmethod=syntax
 set foldlevel=99
-colorscheme xoria256 
-set background=dark
-syntax enable
-set showcmd		" Show (partial) command in status line.
-set showmatch		" Show matching brackets.
-set ignorecase		" Do case insensitive matching
-set smartcase		" Do smart case matching
-set incsearch		" Incremental search
+
+" Search
+set ignorecase
+set smartcase
+set incsearch
 set autochdir
-set hlsearch
-set mouse=a         " Enable the mouse for all modes
-au WinEnter * setlocal number
-au WinLeave * setlocal nonumber
+
+" Keybinds
+nnoremap <leader><leader> <c-^>
+nmap <leader>w :w<CR> " Quick-save
+map <leader>l :bnext<CR>
+map <leader>h :bprevious<CR>
+map <leader>q :bdelete<CR>
+map <leader>c :nohlsearch<CR>
+
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
+
+" Per language settings
+set nocompatible
+filetype off
 
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -68,38 +112,50 @@ fun! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfun
 
-autocmd FileType c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+autocmd FileType c,cpp,java,php,ruby,python,rs autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
-"Allow the use of enter in normal mode.
-nmap <S-Enter> O<Esc>
-nmap <CR> o<Esc>
+" Plugin config
 
-map <space> <leader>
+" lightline.vim
+let g:lightline = {
+            \ 'colorscheme': 'wombat',
+            \ 'active': {
+            \   'left': [['mode', 'paste'],
+            \            ['gitbranch', 'readonly', 'filename', 'modified']]
+            \ },
+            \ 'component_function': {
+            \   'gitbranch': 'fugitive#head'
+            \ },
+            \ }
 
-" Hide highlighting
-map <leader>c :noh<CR>
+" rust.vim
+let g:rustfmt_autosave = 1
 
-" Python
-map <leader>r :!python % <CR>
+" Highlighting
+highlight ALEWarning ctermbg=10 term=reverse
+highlight ALEError ctermbg=14 term=reverse
+highlight ColorColumn ctermbg=233
 
-" Gundo
-map <leader>u :GundoToggle<CR>
+" ale
+let g:ale_rust_rls_config = {
+    \ 'rust': {
+        \ 'all_targets': 1,
+        \ 'build_on_save': 1,
+        \ 'clippy_preference': 'on'
+    \ }
+    \ }
+let g:ale_rust_rls_toolchain = ''
+let g:ale_linters = {'rust': ['rls']}
 
-" Nerdtree
-map <leader>n :NERDTreeToggle<CR>
-let NERDChristmasTree=1
+" autocomplete
+autocmd BufEnter * call ncm2#enable_for_buffer()
+set completeopt=noinsert,menuone,noselect
 
-" Doxygen
-map <leader>d :Dox<CR>
+" LanguageClient
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+    \ }
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 
-" vim-airline
-set laststatus=2
-let g:airline_theme='bubblegum'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
-map <leader>l :bn<CR>
-map <leader>h :bp<CR>
-map <leader>q :bd<CR>
-
-" Syntastic
-let g:syntastic_rust_checkers = ['rustc']
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
