@@ -49,11 +49,11 @@ call matchadd('ColorColumn', '\%80v', 100)
 set list lcs=tab:\┊\ 
 set showcmd
 set showmatch
-set number relativenumber
+set number
 set hlsearch
 set mouse=a
-au WinEnter * setlocal number relativenumber
-au WinLeave * setlocal nonumber norelativenumber
+au WinEnter * setlocal number
+au WinLeave * setlocal nonumber
 set noshowmode
 set laststatus=2
 
