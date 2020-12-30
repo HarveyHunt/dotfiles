@@ -132,8 +132,8 @@ let g:lightline = {
 let g:rustfmt_autosave = 1
 
 " Highlighting
-highlight ALEWarning ctermbg=10 term=reverse
-highlight ALEError ctermbg=14 term=reverse
+highlight ALEWarning ctermbg=none cterm=underline
+highlight ALEError ctermbg=none cterm=underline
 highlight ColorColumn ctermbg=233
 
 " ale
