@@ -137,15 +137,7 @@ highlight ALEError ctermbg=none cterm=underline
 highlight ColorColumn ctermbg=233
 
 " ale
-let g:ale_rust_rls_config = {
-    \ 'rust': {
-        \ 'all_targets': 1,
-        \ 'build_on_save': 1,
-        \ 'clippy_preference': 'on'
-    \ }
-    \ }
-let g:ale_rust_rls_toolchain = ''
-let g:ale_linters = {'rust': ['rls']}
+let g:ale_linters = {'rust': ['analyzer']}
 
 " autocomplete
 autocmd BufEnter * call ncm2#enable_for_buffer()
@@ -153,7 +145,7 @@ set completeopt=noinsert,menuone,noselect
 
 " LanguageClient
 let g:LanguageClient_serverCommands = {
-    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+    \ 'rust': ['rust-analyzer'],
     \ }
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 
