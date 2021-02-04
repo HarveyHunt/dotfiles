@@ -1,4 +1,4 @@
-setxkbmap gb -option ctrl:swapcaps
+setxkbmap us -option ctrl:swapcaps
 xrdb -merge /home/hunt/.Xresources
 xsetroot -cursor_name left_ptr &
 polybar bottom &
