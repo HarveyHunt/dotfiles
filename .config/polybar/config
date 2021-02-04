@@ -30,7 +30,7 @@ alert = #bd2c40
 [bar/bottom]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 80%
-height = 50
+height = 25
 offset-x = 10%
 koffset-y = 10%
 radius = 6.0
@@ -52,7 +52,7 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = Dejavu Sans Mono:size=20
+font-0 = Dejavu Sans Mono:size=8
 font-1 = Material Design Icons:pixelsize=18;1
 font-2 = Material Icons:pixelsize=18;1
 
