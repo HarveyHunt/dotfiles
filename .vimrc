@@ -150,5 +150,8 @@ let g:LanguageClient_serverCommands = {
     \ }
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 
+" Use TAB to control the popup menu
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" Pressing enter will start a new line
+inoremap <expr> <CR> pumvisible() ? "\<c-y>\<cr>" : "\<CR>"
