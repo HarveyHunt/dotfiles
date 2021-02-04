@@ -44,6 +44,7 @@ set undofile
 " UI changes
 colorscheme base16-harmonic-dark
 set background=dark
+set termguicolors
 syntax enable
 call matchadd('ColorColumn', '\%80v', 100)
 set list lcs=tab:\┊\ 
